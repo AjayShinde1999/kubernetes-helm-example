@@ -1,0 +1,22 @@
+# Application image repository and tag
+image:
+  repository: kubernetes-helm-example-1
+  tag: 1.2
+
+# Number of replicas for the deployment
+replicaCount: 2
+
+# Service configuration
+service:
+  name: kubernetes-helm-example-service
+  type: ClusterIP
+  port: 8080
+
+appName: kubernetes-helm-example
+
+# Autoscaling configuration (disabled)
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
